@@ -1,0 +1,21 @@
+.footer {
+  padding: 5rem 0;
+  background-color: #000000;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.footer h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  color: #cccccc;
+}

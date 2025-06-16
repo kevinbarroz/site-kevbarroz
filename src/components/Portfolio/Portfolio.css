@@ -1,0 +1,21 @@
+.portfolio {
+  padding: 5rem 0;
+  background-color: #111111;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.portfolio h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio p {
+  color: #cccccc;
+}

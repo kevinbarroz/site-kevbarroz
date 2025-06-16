@@ -1,74 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #000000;
-  color: #ffffff;
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-
-.App {
-  min-height: 100vh;
-  background-color: #000000;
-}
-
-/* Additional responsive utilities */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 0.8rem;
-  }
-}
-
-/* Button utilities */
-.btn-base {
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: inherit;
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-  color: #000000;
-  padding: 1rem 2rem;
-}
-
-.btn-secondary {
-  background: rgba(255,255,255,0.1);
-  color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 1rem 2rem;
-}
-
-@media (max-width: 768px) {
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    max-width: 280px;
-    padding: 0.8rem 1.5rem;
-  }
-}
-
 /* Global Mobile Optimizations */
+
+/* General Mobile Responsive Helpers */
 @media (max-width: 768px) {
   /* Force responsive containers */
   div[style*="maxWidth: '1200px'"] {
@@ -142,6 +74,30 @@ body {
   }
 }
 
+@media (max-width: 360px) {
+  /* Extra small screens */
+  section[style*="padding: '3rem 0'"] {
+    padding: 2rem 0 !important;
+  }
+  
+  h1[style*="fontSize: '1.8rem'"] {
+    font-size: 1.6rem !important;
+  }
+  
+  h2[style*="fontSize: '1.6rem'"] {
+    font-size: 1.4rem !important;
+  }
+  
+  div[style*="padding: '1.5rem'"] {
+    padding: 1rem !important;
+  }
+  
+  button[style*="padding: '1rem"] {
+    padding: 0.8rem 1.2rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+
 /* Touch-friendly interactions */
 @media (max-width: 768px) {
   button, 
@@ -149,6 +105,12 @@ body {
   [role="button"] {
     min-height: 44px;
     min-width: 44px;
+  }
+  
+  /* Better touch targets */
+  .nav-link,
+  .cta-button {
+    padding: 1rem !important;
   }
 }
 
@@ -171,11 +133,68 @@ body {
   overflow-x: hidden;
 }
 
+/* Better image handling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility classes for mobile */
+.mobile-hidden {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+}
+
 /* Better form inputs on mobile */
 @media (max-width: 768px) {
   input,
   textarea,
   select {
     font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Loading states and performance */
+* {
+  box-sizing: border-box;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  * {
+    border-color: #ffffff !important;
+  }
+}
+
+/* Dark mode optimization (já é dark, mas para compatibilidade) */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000;
+    color: #ffffff;
   }
 }

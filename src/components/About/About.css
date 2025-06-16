@@ -1,0 +1,81 @@
+/* About styles */
+.about {
+  padding: 8rem 0;
+  background: #000000;
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 0;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+  
+  .about div[style*="textAlign: 'left'"] {
+    text-align: center !important;
+  }
+  
+  .about div[style*="maxWidth: '1200px'"] {
+    padding: 0 1rem !important;
+  }
+  
+  .about h2 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  .about p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+  
+  .about button {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 3rem 0;
+  }
+  
+  .about div[style*="aspectRatio: '4/3'"] {
+    aspect-ratio: 3/2 !important;
+    margin-bottom: 1rem;
+  }
+  
+  .about h2 {
+    font-size: 1.8rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .about div[style*="marginBottom: '2rem'"] {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .about div[style*="padding: '0.5rem 1rem'"] {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .about h2 {
+    font-size: 1.6rem !important;
+  }
+}
